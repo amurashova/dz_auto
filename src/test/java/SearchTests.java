@@ -1,14 +1,10 @@
-import org.junit.jupiter.api.Test;
+package guru.qa;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+public class Main {
 
-public class SearchTests {
-    @Test
-    void successfulSearchTest() {
-        open("https://www.google.com/");
-        $("[name=q]").setValue("selenide").pressEnter();
-        $("[id=search]").shouldHave(text("https://selenide.org"));
+    private static String msg = "Hello qa.guru!";
+
+    public static void main(String... args) {
+        System.out.println(msg);
     }
 }
